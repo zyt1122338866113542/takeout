@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/components/dishes/dishes",
+    "pages/components/xiaochi/xiaochi",
+    "pages/components/cart/cart",
+    "pages/components/order/order",
+    "pages/components/me/me",
+    "pages/components/take/take"
+  ],
+  "window":{
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#0099ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/components/cart/cart",
+        "iconPath": "images/icon_cate.png",
+        "selectedIconPath": "images/icon_cate_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/components/order/order",
+        "iconPath": "images/icon_cate.png",
+        "selectedIconPath": "images/icon_cate_selected.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/components/me/me",
+        "iconPath": "images/icon_member.png",
+        "selectedIconPath": "images/icon_member_selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+
+
+}
