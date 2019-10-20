@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/components/dishes/dishes",
+    "pages/components/vip/vip",
+    "pages/components/me/me",
+    "pages/components/address/list/list",
+    "pages/components/address/add/add",
+    "pages/components/order/checked/checked",
+    "pages/components/order/list/list",
+    "pages/components/more/more"
+  ],
+  "permission":{
+    "scope.userLocation":{
+      "desc":"请点击确认"
+    }
+  },
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#0099ff",
+    "navigationBarTitleText": "美食在手"
+  },
+  
+  "tabBar": {
+    "selectedColor": "#0099ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/components/vip/vip",
+        "iconPath": "images/icon-vip.png",
+        "selectedIconPath": "images/icon-vip-selected .png",
+        "text": "会员"
+      },
+      {
+        "pagePath": "pages/components/more/more",
+        "iconPath": "images/icon_cate.png",
+        "selectedIconPath": "images/icon_cate_selected.png",
+        "text": "更多"
+      },
+      {
+        "pagePath": "pages/components/me/me",
+        "iconPath": "images/icon_member.png",
+        "selectedIconPath": "images/icon_member_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap16.json"
+}

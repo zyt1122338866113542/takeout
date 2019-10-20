@@ -1,0 +1,31 @@
+<!-- 个人信息 -->
+<view class='container'>
+<view class="summary">
+    <view class="profileimg">
+    <!-- 获取当前登陆的用户的头像 -->
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="profilename">
+    <!-- 获取当前登陆用户昵称 -->
+    <open-data type="userNickName"></open-data>
+  </view>
+  <!-- 获取用户信息：询问是否允许 -->
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUser">获取用户信息</button> -->
+</view>
+ <view class="info_list" bindtap="jump" wx:for="{{userListInfo}}" wx:key="index">
+    <block>
+        <view class="weui_cell" data-id="{{item.id}}">
+            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p"> {{item.text}} </view>
+            </view>
+            <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
+            <view class="with_arrow"></view>
+        </view>
+    </block>
+  </view>
+<!-- 退出登录 -->
+<view class="logout" bindtap="logout">
+	退出登录
+</view>
+</view>

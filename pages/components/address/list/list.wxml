@@ -1,0 +1,31 @@
+<!--pages/components/address/list/list.wxml-->
+<!-- 地址列表 -->
+<view class="listview">
+	<view class="item">
+		<view class="bd" bindtap="selectAddress" >
+			<view class="receiver" >
+				<view class="firstname">姓名:{{addressList[0].realname}}</view>
+				<image class="ft" src="/images/edit.png" bindtap="edit"  data-index="0"/>
+			</view>	
+      <view class="receiver" >
+				<view class="gender">性别:{{addressList[1].gender}}</view>
+				<image class="ft" src="/images/edit.png" bindtap="edit" data-index="1" />
+			</view>
+      <view class="receiver" >
+				<view class="mobile">电话:{{addressList[2].mobile}}</view>
+				<image class="ft" src="/images/edit.png" bindtap="edit" data-index="2" />
+			</view>
+      <view class="receiver" >
+				<view class="detail">详细地址:{{addressList[4].detail}}</view>
+				<image class="ft" src="/images/edit.png" bindtap="edit"  data-index="4"/>
+			</view>
+		</view>
+		
+	</view>
+</view>
+<view bindtap='jumporderchecked'>到我的订单</view>
+<!-- 添加按钮 -->
+<view class="add-address" bindtap="add">
+	<image src="/images/add.png" class="icon" />
+	<view class="caption">新增地址</view>
+</view>

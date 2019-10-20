@@ -1,0 +1,39 @@
+<!-- checkout.wxml -->
+<!-- 地址选择 -->
+<view class="container">
+<image class='img' src='../../../../images/index/1.png'></image>
+	<!-- 支付方式 -->
+	<!-- 在线支付与货到付款 -->
+	<!-- 商品清单 -->
+	<view class="info">
+		<!-- 清单 -->
+		<view class="list">
+			<view class="item" wx:for="{{cartToArray}}" wx:key="">
+				<view class="title">{{item.name}}</view>
+				<view class="price">{{item.price}}</view>
+				<view class="quantity">{{item.num}}</view>
+			</view>
+
+		</view>
+		<!-- 总计 -->
+		<view class="itempro">
+			<view class="amount">总计:{{total}}元</view>
+		</view>
+	</view>
+	<!-- 备注信息 -->
+	<view class="remark">
+		<view class="item disperse" bindtap="naviToRemark">
+			<view class="title-label-order">订单备注
+        <input type='text' class="subtitle-label remark-title" value='' placeholder='口味，偏好等'></input>
+      </view>
+		</view>
+	</view>
+</view>
+<!-- 提交订单 -->
+<view class="footer">
+	<view class="payment">{{total}}</view>
+	<view class="checkout" bindtap="payment">提交订单</view>
+  <!-- <navigator class="checkout" url='../list/list' open-type='switchTab' bindtap="payment">提交订单</navigator> -->
+
+    
+</view>

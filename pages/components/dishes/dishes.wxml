@@ -1,0 +1,59 @@
+<view class="container flex-wrap flex-direction-row">
+	<!-- left aside -->
+	<view class="aside flex-wrap flex-direction-col">
+		<block wx:for="{{navList}}" wx:key="index">
+			<text class="type-nav {{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</text>
+		</block>
+	</view>
+
+	<!-- content -->
+	<view class="content flex-item">
+		<block wx:for="{{dishesList[curIndex]}}" wx:key="index">
+    <!-- 不冒泡用catchtap事件 -->
+			<!-- <view class="dish flex-wrap flex-direction-row" catchtap="selectDish" data-id="{{item.id}}"> -->
+      <view class="dish flex-wrap flex-direction-row" data-id="{{item.id}}">
+				<view class="flex-item">
+					<text class="title">{{item.name}}</text>
+					<p>￥{{item.price}}</p>
+				</view>
+				<view class="add-btn"><icon type="{{item.status ? 'success' : 'circle'}}" color="orange" size="30" bindtap='choosed' data-btn-id="{{item.id}}" data-btn-price="{{item.price}}" data-btn-name="{{item.name}}" data-btn-num="{{item.num}}"></icon></view>
+			</view>
+		</block>
+
+	</view>
+
+</view>
+
+<!-- cart -->
+<view class="cart-container">
+	<text class="total badge badge-offset" bindtap='jumpcart'>购物车：{{cartTotal}}</text>
+  <image src="/images/cart.png" bindtap="cascadeToggle" class="cart" />
+  <text class='pay' bindtap="checkout">结算</text>
+</view>
+
+<!-- 购物车容器 -->
+<view class="modal">
+	<view animation="{{animationMask}}" class="modal-mask {{maskVisual}}" bindtap="cascadeDismiss"></view>
+	<view animation="{{animationData}}" class="modal-content" style="height: {{cartHeight}}px; bottom: -{{cartHeight}}px;">
+	    <view class="modal-header">
+	        <text class="modal-title">购物车</text>
+	        <image src="/images/close.png" class="modal-close" bindtap="cascadeDismiss" />
+	    </view>
+	    <scroll-view class="modal-body" scroll-y="true" style="height: {{scrollHeight}}px;">
+	    	<view class="item" wx:for="{{cartObjects}}" wx:key="">
+	    		<view class="title">{{item.food.title}}</view>
+	    		<view class="fee">{{item.food.price * item.quantity}}</view>
+	    		<view class="stepper">
+					
+					<image src="/images/subtract.png" class="symbol" bindtap="subtract" wx:if="{{cartData[item.food.objectId]}}" data-food-id="{{item.food.objectId}}" />
+					
+					<view class="value">{{cartData[item.food.objectId]}}</view>
+					
+					<image src="/images/add.png" class="symbol" bindtap="add" data-food-id="{{item.food.objectId}}" />
+				</view>
+	    	</view>
+    	</scroll-view>
+	</view>
+</view> 
+
+<loading hidden="{{hidden}}">玩命加载中…</loading>

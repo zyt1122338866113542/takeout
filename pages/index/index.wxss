@@ -1,0 +1,38 @@
+/**index.wxss**/
+.my-swiper image{
+  width: 100%;
+}
+
+.wrap{
+	display: inline-block;
+	margin-top: .8rem;
+  /* background:url(../../images/.png); */
+}
+.wrap-item{
+	display: inline-block;
+	width: 33%;
+	height: 3rem;
+	line-height: 3rem;
+	border-bottom: 1px solid #ddd;
+	background-color: pink;
+	text-align: center;
+  font-family: '行楷';
+}
+ /*不支持 :nth-child(2);*/
+.wrap-item.exp{
+	border: 1px solid #ddd;
+	border-top: 0;
+}
+/* 图片列表 */
+.imglist{
+  margin-top: 10rpx;
+  width: 100%;
+  border-bottom: 1px solid #000;
+}
+.imglist image{
+  height: 350rpx;
+}
+.slide-image{
+  width: 100%;
+  
+}

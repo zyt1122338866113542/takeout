@@ -1,0 +1,85 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx17d8041aa77f47a6",
+	"projectname": "takeoutmy",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "dishes",
+					"pathName": "pages/components/dishes/dishes",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/components/me/me",
+					"pathName": "pages/components/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/components/address/list/list",
+					"pathName": "pages/components/address/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/components/me/me",
+					"pathName": "pages/components/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "add",
+					"pathName": "pages/components/address/add/add",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order/checked",
+					"pathName": "pages/components/order/checked/checked"
+				}
+			]
+		}
+	}
+}
